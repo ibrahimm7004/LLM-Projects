@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-2 Chatbot</title>
+</head>
+<body>
+    <h1>GPT-2 Chatbot</h1>
+    <form action="/get_response" method="POST">
+        <label for="user_input">Enter your prompt:</label><br>
+        <input type="text" id="user_input" name="user_input"><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if user_input %}
+        <h3>Your Prompt:</h3>
+        <p>{{ user_input }}</p>
+        <h3>Bot's Response:</h3>
+        <p>{{ response_text }}</p>
+    {% endif %}
+</body>
+</html>
